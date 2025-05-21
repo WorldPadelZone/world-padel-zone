@@ -1,0 +1,149 @@
+Expert Replit-GitHub Integration Prompt for World Padel Zone
+Objective
+Develop a high-performance, mobile-first website for World Padel Zone using Replit while implementing professional GitHub integration practices, ensuring seamless code synchronization, version control, and collaborative development between both platforms.
+Technical Requirements
+Replit-GitHub Integration Setup
+
+Repository Connection: Configure Replit to properly connect with the existing GitHub repository at https://github.com/WorldPadelZone
+Branch Management: Establish a consistent branching strategy that works across both Replit and GitHub
+Synchronization Protocol: Implement practices to ensure changes made in Replit are properly committed and pushed to GitHub
+Pull Request Workflow: Configure the development process to facilitate code reviews through GitHub pull requests
+Continuous Integration: Set up automated testing that works when code is pushed from Replit to GitHub
+
+Environment Configuration
+
+Shared Environment Variables: Establish a secure method for managing environment variables across Replit and GitHub
+Secrets Management: Configure secrets in Replit that won't be exposed when syncing with GitHub
+Development vs. Production: Create separate configurations for development (Replit) and production (GitHub deployment)
+.gitignore Setup: Configure proper .gitignore files to prevent Replit-specific files from cluttering the GitHub repository
+README Documentation: Maintain comprehensive documentation that addresses working with both platforms
+
+Implementation Guidelines
+Initial Setup
+
+Repository Cloning:
+
+Clone the existing GitHub repository (https://github.com/WorldPadelZone) into Replit
+Configure Replit's Git credentials with appropriate access tokens
+
+
+Branch Structure Implementation:
+
+main - Production-ready code
+develop - Integration branch for features
+feature/[name] - Individual feature branches
+hotfix/[name] - Critical fixes
+
+
+Development Environment Configuration:
+
+Set up Replit's run button to execute the development server
+Configure appropriate package.json scripts that work in both environments
+Ensure node_modules are properly managed between platforms
+
+
+
+Workflow Best Practices
+When Developing in Replit
+
+Before Starting Work:
+
+Pull latest changes from GitHub to Replit
+Create or switch to appropriate feature branch
+Verify development environment is functioning
+
+
+During Development:
+
+Make regular commits with descriptive messages
+Use Replit's console for testing and debugging
+Document any Replit-specific configurations or workarounds
+
+
+After Completing Work:
+
+Run tests within Replit
+Push changes to GitHub
+Create pull request through GitHub interface
+
+
+
+GitHub Integration Practices
+
+Implement GitHub Actions for continuous integration that account for Replit's environment
+Configure GitHub branch protection rules to ensure quality
+Set up GitHub issue templates for bug reports and feature requests
+Establish clear documentation for both Replit and GitHub workflows
+
+Project Structure Optimizations
+
+Organize repository to work efficiently in both environments:
+/public          # Static assets
+/src             # Source code
+  /components    # Reusable UI components
+  /layouts       # Page layouts
+  /pages         # Page components
+  /styles        # CSS/SCSS files
+  /utils         # Utility functions
+  /hooks         # Custom React hooks (if applicable)
+  /api           # API integration
+/tests           # Test files
+.replit          # Replit configuration
+replit.nix       # Replit Nix configuration
+.gitignore       # Git ignore file
+README.md        # Project documentation
+
+
+Testing Strategy
+
+Implement tests that can run in both Replit and GitHub CI environments
+Create testing scripts that work consistently across platforms
+Document any platform-specific testing considerations
+
+Deployment Pipeline
+
+Configure GitHub Actions for deployment from the main branch
+Set up preview deployments for pull requests
+Document the release process from development in Replit to production deployment
+
+Replit-Specific Optimizations
+Performance Considerations
+
+Minimize dependencies to prevent exceeding Replit's storage limits
+Implement efficient asset loading strategies
+Configure proper caching for Replit's environment
+Optimize build processes to work within Replit's constraints
+
+Collaboration Features
+
+Leverage Replit's multiplayer coding for pair programming sessions
+Use Replit's commenting features alongside GitHub issues
+Document how team members should coordinate when using both platforms
+
+Debugging and Troubleshooting
+
+Establish protocols for debugging issues specific to Replit-GitHub synchronization
+Create documentation for common issues and their resolutions
+Implement logging that helps identify platform-specific problems
+
+Mobile-First Implementation
+
+Ensure responsive designs are properly tested in Replit's preview modes
+Optimize performance for mobile users with consideration for Replit's hosting capabilities
+Implement touch-friendly interfaces that can be tested in Replit's environment
+
+Documentation Requirements
+
+Setup Guide: Step-by-step instructions for setting up the development environment in Replit with GitHub integration
+Workflow Documentation: Clear processes for development, testing, and deployment across both platforms
+Troubleshooting Guide: Solutions for common issues that might arise when working between Replit and GitHub
+Architecture Documentation: Technical documentation explaining how the application is structured to work in both environments
+
+Deliverables
+
+Fully functional Replit project connected to the GitHub repository
+Comprehensive documentation for the development workflow
+Configured CI/CD pipeline that works with both platforms
+Mobile-optimized website with all specified features
+
+This prompt is specifically tailored to leverage both Replit's collaborative development environment and GitHub's version control capabilities, ensuring a professional development workflow for the World Padel Zone website while addressing the specific integration challenges between these platforms.
