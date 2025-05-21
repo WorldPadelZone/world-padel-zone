@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=client/index.html">
+    <title>World Padel Zone</title>
+    <meta name="description" content="The ultimate digital platform for the global padel community, offering news, tournaments, equipment reviews, marketplace, travel tips, and more.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://worldpadelzone.com/">
+    <meta property="og:title" content="World Padel Zone - Ultimate Padel Community">
+    <meta property="og:description" content="Your complete digital destination for everything padel - news, tournaments, equipment, community, and more.">
+    <meta property="og:image" content="/public/images/world padel zone 01.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://worldpadelzone.com/">
+    <meta property="twitter:title" content="World Padel Zone - Ultimate Padel Community">
+    <meta property="twitter:description" content="Your complete digital destination for everything padel - news, tournaments, equipment, community, and more.">
+    <meta property="twitter:image" content="/public/images/world padel zone 01.jpg">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #38bdf8;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #38bdf8;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .redirect-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #38bdf8;
+            text-decoration: none;
+            border: 1px solid #38bdf8;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .redirect-link:hover {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>World Padel Zone</h1>
+        <p>The ultimate digital platform for the global padel community</p>
+        <div class="loading-spinner"></div>
+        <p>Redirecting to the application...</p>
+        <a href="client/index.html" class="redirect-link">Click here if not redirected</a>
+    </div>
+    
+    <script>
+        // This script ensures the redirect works even if meta refresh fails
+        window.onload = function() {
+            setTimeout(function() {
+                window.location.href = 'client/index.html';
+            }, 2000);
+        };
+    </script>
+</body>
+</html>
