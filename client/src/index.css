@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600&family=Oswald:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 20%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 217 58% 26%; /* #1A3A6C */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 107 45% 50%; /* #56B947 */
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 31 100% 50%; /* #FF8200 */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 217 58% 26%; /* Still #1A3A6C but visibility adjusted for dark mode */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 107 45% 50%; /* Still #56B947 */
+  --secondary-foreground: 0 0% 98%;
+  --accent: 31 100% 50%; /* Still #FF8200 */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-opensans antialiased bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold;
+  }
+}
+
+@layer components {
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  .card-shadow {
+    @apply shadow-md dark:shadow-lg;
+  }
+
+  .bottom-tab-active {
+    @apply text-secondary border-t-2 border-secondary;
+  }
+
+  .section-title {
+    @apply font-montserrat font-bold text-xl dark:text-white;
+  }
+
+  .section-link {
+    @apply text-secondary font-semibold text-sm;
+  }
+}
+
+/* Rankings ticker animation */
+.rankings-ticker {
+  white-space: nowrap;
+  will-change: transform;
+  animation: ticker 30s linear infinite;
+}
+
+.rankings-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Lazy load image effect */
+.lazy-load-blur {
+  filter: blur(10px);
+  transition: filter 0.3s ease-out;
+}
+
+.lazy-loaded {
+  filter: blur(0);
+}
